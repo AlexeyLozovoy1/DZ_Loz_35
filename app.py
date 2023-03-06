@@ -9,11 +9,11 @@ def index():
 
 @app.route('/prodject')
 def prodject():
-    return render_template("prodject.html", title='Abaut')
+    return render_template("prodject.html", title='Наши проэкты')
 
 @app.route('/abaut')
 def abaut():
-    return render_template("abaut.html", title='Abaut')
+    return render_template("abaut.html", title='О нас')
 
 @app.route('/api')
 def api():
