@@ -1,22 +1,11 @@
 from flask import Flask
-from flask import url_for, render_template, send_file, redirect
-import datetime, time as sleep
-# import json
+from flask import render_template
+
 app = Flask(__name__)
 
-
 @app.route('/')
-def hello_world():  # put application's code here
-    # return send_file(url_for('static', filename='index.html'))
-    # return send_file('static/index.html')
-    time = datetime.datetime.now()
-    # hello = "Добрый Ночь"
-    # if 5 < time.hour < 17:
-    #     hello = "Добрый день"
-
-    arr = [1, 2, 3, 4]
-    # return render_template("header.html")
-    return render_template("index.html", title=time, head1='head1', arr=arr, time=time, sleep=sleep.sleep)
+def index():
+    return render_template("index.html", title='Главная')
 
 @app.route('/prodject')
 def prodject():
