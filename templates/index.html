@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block main %}
+    <main>
+    <h1 class="text-center">{{ head1 }}</h1>
+
+    {% set hello = "Добрый Ночь" %}
+    {% if 0 < time.second < 30 %}
+    {% set hello = "Добрый день" %}
+        <p>Lorem</p>
+    {% endif %}
+
+    <ul>
+        {% for el in arr %}
+        <li>{{ el }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2 class="text-center">{{ hello }}</h2>
+    <div class="qwe" id="">
+
+    </div>
+    </main>
+{% endblock %}
